@@ -37,8 +37,7 @@
     transform: rotate(360deg);
   }
 }
-
-.container{
+.dashed{
   width: 80%;
   border: 2px dotted gray;
   padding: 20px;
