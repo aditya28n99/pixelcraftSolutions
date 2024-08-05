@@ -1,6 +1,7 @@
 import React from 'react';
 import PrimeChecker from './components/PrimeChecker';
 import NameList from './components/NameList';
+import JsFunctions from './components/JsFunctions';
 
 let data = [
   {name: 'aditya'}, {name: 'aniket'}, {name: 'swapnil'}, {name: 'chiku'}, {name: 'sakshi'}, {name: 'shital'}
@@ -17,6 +18,7 @@ export default function Home() {
     <h3>Write a component that receives an array of objects with name property. Render alphabetically orders lits containing only the names that start with lett 'C'</h3>
     <NameList data={data} />
     </div>
+    <JsFunctions/>
     </>
   );
 }
