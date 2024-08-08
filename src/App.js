@@ -4,6 +4,7 @@ import Home from './Home';
 import Functions from "./pages/Functions";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from "./components/NavigationBar";
+import Arrays from "./pages/Arrays";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/functions" element={<Functions/>}/>
+        <Route path="/arrays" element={<Arrays/>}/>
       </Routes>
     </BrowserRouter>
   );
