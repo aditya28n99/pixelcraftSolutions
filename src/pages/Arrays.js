@@ -6,6 +6,7 @@ export default function Arrays() {
     const Names = ['aditya', 'ankita', 'anurag', 'vish', 'saurabh', 'nilesh'];
     const MixedArray = [22, 'shital', { day: 'Thursday' }, [25]];
 
+    let arr = [1,2,3,4,5]
     //length
     console.log(`Lenght is: ${Numbers.length}`);
 
@@ -16,7 +17,32 @@ export default function Arrays() {
     //Array.From()
     const newFromArray = Array.from(MixedArray[1]);
     console.log(newFromArray);
+
+    //push() - Adds an element to the end of an array
+
+    console.log('This is the original arry before push', arr);
+    function addElement(arr){
+        for(let i = 0; i<5; i++){
+            arr.push(arr[i]+2);
+        }
+        return arr;
+    }
+    console.log('This is the pushed arry',addElement(arr));
     
+    //pop() - Removes the last element from an array
+
+    console.log('This is the original arry before pop', arr);
+
+    function removeElement(arr){
+        for(let i=0; i<5; i++){
+            arr.pop();
+        }
+        return arr;
+    }
+    console.log('This is the popped arry', removeElement(arr));
+
+    // original arry get modified.
+
     
     return (
         <>
@@ -37,6 +63,10 @@ export default function Arrays() {
                 </p>
                 <p>Spread Syntax: [...existingArray, element]
                 </p>
+
+                <strong>Array Methods</strong>
+                <p>.1  Push() - Adds an element to the end of an array</p>
+                <p>.2  pop() - Removes the last element from an array</p>
             </div>
 
         </>)
