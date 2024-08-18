@@ -43,6 +43,23 @@ export default function Arrays() {
 
     // original arry get modified.
 
+    // shift() - Removes the first element from an array
+    function removeFirstElement(arr){
+        for(let i=0; i<2; i++){
+            arr.shift();
+        }
+        return arr;
+    }
+    console.log('This is the shifted arry', removeFirstElement(arr));
+
+    //unshift() - Adds one or more elements to the beginning of an array
+    function unshiftElement(arr, element){
+        arr.unshift(element);
+        return arr;
+    }
+    console.log('This is the unshifted arry', unshiftElement(arr, 2));
+
+    
     
     return (
         <>
