@@ -59,7 +59,44 @@ export default function Arrays() {
     }
     console.log('This is the unshifted arry', unshiftElement(arr, 2));
 
-    
+    // concat() - Merges two or more arrays
+
+    function concatArray(arr1, arr2){
+        return arr1.concat(arr2);
+    }
+    let concatedArray = concatArray(Names, arr);
+    console.log('this is concated array: ', concatedArray);
+
+    // slice() - Returns a portion of an array into a new array
+
+    function sliceArray(arr, start, end){
+        return arr.slice(start, end);
+    }
+    let slicedArray = sliceArray(concatedArray, 0, 2);
+
+    console.log("this is sliced concated array:", slicedArray);
+
+    // splice() - Adds/removes items to/from an array and returns the removed elements 
+
+    function spliceArray(arr){
+        return arr.splice(1, 2, 'shital');
+    }
+
+    let splicedItems = spliceArray(Names);
+    console.log("these are the spliced items:", splicedItems)
+    // will it change the origenal arrya?? let see..
+    console.log("the splice method affected the orignal array Names: ", Names)
+
+    function spliceArrayWithoutMutation(arr){
+        let copyArray = arr.slice(); // making a shallow copy of the origenal array to avoid mutation.
+        return copyArray.splice(1, 1, 'ankita');
+    }
+
+    let splicedItems2 = spliceArrayWithoutMutation(Names);
+    console.log("these are the spliced items:", splicedItems2)
+    // will it change the origenal arrya?? let see..
+    console.log("the splice method affected the orignal array Names: ", Names)
+
     
     return (
         <>
